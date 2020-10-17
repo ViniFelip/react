@@ -2,6 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function botao() {
+const [indo, setVoltando]= useState ([])
+
+function clickbotao(){
+  setVoltando(['retorne'])
+}
+
+
+return <div>
+<button type="button" onClick={clickbotao}>Ir para pagina</button>
+
+{indo.map((pagi, index) =>(
+  <p key={index}>{pagi}</p>
+
+))}
+</div>
+}
+
+
 
   function cv (p) {
   return <div className="cv">
@@ -58,7 +77,7 @@ function App() {
         texto:'O homem que não tem juízo ridicularizao seu próximo, mas o que tem entendimento refreia a língua.'
       }  
 
-
+        
 
       ])}
       </header>
